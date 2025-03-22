@@ -12,7 +12,7 @@ def shorten_url(request):
     serializer = ShortURLSerializer(data=request.data)
     if serializer.is_valid():
         short_url = serializer.save()
-        return Response({ "original_url": short_url.original_url, "short_code": short_url.short_code, "short_url": f"http://localhost:8000/{short_url.short_code}" }, status=status.HTTP_201_CREATED)
+        return Response({ "original_url": short_url.original_url, "short_code": short_url.short_code, "short_url": f"https://urlshortie.up.railway.app/{short_url.short_code}" }, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     """if request.method == "POST":
         original_url = request.POST.get('original_url')
