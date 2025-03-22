@@ -28,6 +28,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ["urlshortie.up.railway.app", "127.0.0.1"]
 
+BASE_URL = "https://urlshortie.up.railway.app/"
 
 # Application definition
 
