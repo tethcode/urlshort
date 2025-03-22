@@ -17,7 +17,7 @@ def shorten_url(request):
     """if request.method == "POST":
         original_url = request.POST.get('original_url')
         short_url = ShortURL.objects.create(original_url=original_url)
-        return HttpResponse(f"Short URL: http://localhost:8000/{short_url.short_code}")
+        return HttpResponse(f"https://urlshortie.up.railway.app/{short_url.short_code}")
     return render(request, 'index.html')"""
 
 
